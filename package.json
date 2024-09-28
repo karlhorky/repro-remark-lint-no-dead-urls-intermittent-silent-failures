@@ -1,0 +1,28 @@
+{
+  "name": "repro-remark-lint-no-dead-urls-not-linting",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Karl Horky",
+  "main": "index.js",
+  "scripts": {
+    "check-failing-1": "remark --frail --rc-path remark-lint-no-dead-urls.mjs \"src/pages/**/*.mdx\"",
+    "check-failing-2": "remark ./src/pages/ --frail --rc-path remark-lint-no-dead-urls.mjs",
+    "check-failing-3": "remark src/pages/**/*.mdx --frail --rc-path remark-lint-no-dead-urls.mjs",
+    "check-failing-4": "remark . --frail --rc-path remark-lint-no-dead-urls.mjs",
+    "check-working-1": "remark ./src/pages/b/x.mdx --frail --rc-path remark-lint-no-dead-urls.mjs",
+    "check-working-2": "remark ./src/pages/*/x.mdx --frail --rc-path remark-lint-no-dead-urls.mjs",
+    "check-working-3": "remark ./src/pages/**/y.mdx --frail --rc-path remark-lint-no-dead-urls.mjs"
+  },
+  "dependencies": {
+    "remark-cli": "^12.0.1",
+    "remark-lint": "^10.0.0",
+    "remark-lint-no-dead-urls": "^2.0.0",
+    "remark-mdx": "^3.0.1"
+  },
+  "devDependencies": {
+    "unified-engine": "^11.2.1"
+  },
+  "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b"
+}
