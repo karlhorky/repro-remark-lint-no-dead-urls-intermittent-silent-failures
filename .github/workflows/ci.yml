@@ -4,7 +4,7 @@ on: push
 jobs:
   ci:
     name: CI
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -15,17 +15,7 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
-      - name: check-failing-1 (quoted path with glob at end - fails silently, misses files)
-        run: pnpm run check-failing-1
-      - name: check-failing-2 (dot slash dir path at start - fails silently, misses files)
-        run: pnpm run check-failing-2
-      - name: check-failing-3 (glob path at start - fails silently, lints 1st file, misses 2nd file)
-        run: pnpm run check-failing-3
-      - name: check-failing-4 (dot at start - fails silently, misses files)
-        run: pnpm run check-failing-4
-      - name: check-working-1 (dot slash file path at start - works, no issues found)
-        run: pnpm run check-working-1
-      - name: check-working-2 (dot slash path with single wildcard at start - works, no issues found)
-        run: pnpm run check-working-2
-      - name: check-working-3 (glob path at start - works, no issues found)
-        run: pnpm run check-working-3
+      - run: pnpm run check-failing-intermittent
+      - run: pnpm run check-failing-intermittent
+      - run: pnpm run check-failing-intermittent
+      - run: pnpm run check-failing-intermittent

@@ -7,13 +7,7 @@
   "author": "Karl Horky",
   "main": "index.js",
   "scripts": {
-    "check-failing-1": "remark --frail --rc-path remark-lint-no-dead-urls.mjs \"src/pages/**/*.mdx\"",
-    "check-failing-2": "remark ./src/pages/ --frail --rc-path remark-lint-no-dead-urls.mjs",
-    "check-failing-3": "remark src/pages/**/*.mdx --frail --rc-path remark-lint-no-dead-urls.mjs",
-    "check-failing-4": "remark . --frail --rc-path remark-lint-no-dead-urls.mjs",
-    "check-working-1": "remark ./src/pages/b/x.mdx --frail --rc-path remark-lint-no-dead-urls.mjs",
-    "check-working-2": "remark ./src/pages/*/x.mdx --frail --rc-path remark-lint-no-dead-urls.mjs",
-    "check-working-3": "remark ./src/pages/**/y.mdx --frail --rc-path remark-lint-no-dead-urls.mjs"
+    "check-failing-intermittent": "remark ./src/pages/ --ext mdx --frail --rc-path remark-lint-no-dead-urls.mjs"
   },
   "dependencies": {
     "remark-cli": "^12.0.1",

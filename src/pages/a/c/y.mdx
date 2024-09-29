@@ -1,3 +1,130 @@
+- [Zapier](https://zapier.com/learn/automate-apps-examples/)
+- [IFTTT](https://ifttt.com/)
+- [AutoHotkey](https://www.autohotkey.com/) (Windows)
+- [Automator](https://support.apple.com/guide/automator/welcome/mac) (macOS)
+- [Microsoft Power Automate Desktop](https://flow.microsoft.com/en-us/desktop/)
+- [Alexa Skills Kit](https://developer.amazon.com/en-US/alexa/alexa-skills-kit)
+- [Voiceflow: No-code platform for building AI agents](https://www.voiceflow.com/)
 - [iMacros Chrome Extension](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp?hl=en)
+- [UI.Vision RPA Browser Extensions](https://ui.vision/)
+- [Wildfire Chrome Extension](https://chrome.google.com/webstore/detail/wildfire/djhgeeodemlfdpmcccdekfalbhllcoim/)
+- [Slides](/slide-decks/history-of-the-web-standards-community/index.html)
+- [Early Computing: Crash Course Computer Science #1](https://www.youtube.com/watch?v=O5nskjZ_GoI)
+- [Electronic Computing: Crash Course Computer Science #2](https://www.youtube.com/watch?v=LN0ucKNX0hc)
+- [History of Computing](https://archive.ph/Pj1eh)
+- [An Ancient Greek Astronomical Calculation Machine (the Antikythera) Reveals New Secrets](https://archive.ph/WgWHb)
+- [History of Computers: A Brief Timeline](https://www.livescience.com/20718-computer-history.html)
+- [The Modern History of Computing](https://plato.stanford.edu/entries/computing-history/)
+- [Tom Kilburn](https://www.britannica.com/biography/Tom-Kilburn)
+- [Web 101: A History of the GUI](https://www.wired.com/1997/12/web-101-a-history-of-the-gui/)
+- [History of programming languages](https://devskiller.com/history-of-programming-languages/)
+- [A Brief History of Programming Languages: Part I](https://www.learnacademy.org/blog/first-programming-language-use-microsoft-apple/)
+- [A Brief History of Programming](https://www.cdslab.org/python/notes/preliminary-foundations/programming-history/programming-history.html)
+- [What is machine language, and how was it invented?](https://www.quora.com/What-is-machine-language-and-how-was-it-invented)
+- [A History of Computer Programming Languages](https://web.archive.org/web/20220102194644/https://cs.brown.edu/~adf/programming_languages.html)
+- [Programming Languages Through the Years](https://archive.ph/6eLUZ)
+- [Programming: A short history of computer languages](https://rcrdo.com/2015/08/31/programming-a-short-history-of-computer-languages/)
+- [Kathleen Booth - Inventor of Assembly Language](https://archive.ph/OOKlA)
+- [Let's Use More JavaScript, OK?](https://speakerdeck.com/ggyygo/ggyy7788-cheng-shi-she-ji)
+- [Chapter 4. How JavaScript Was Created](https://exploringjs.com/es5/ch04.html)
+- [Popularity](https://brendaneich.com/2008/04/popularity/)
+- [Evolution of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [What do they mean by GML, SGML, HTML, XML, XHTML, HTML5, and what is the relationship between them?](https://translate.google.com/translate?hl=&sl=zh-CN&tl=en&u=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F261885023&sandbox=1)
+- [The Languages Which Almost Became CSS](https://eager.io/blog/the-languages-which-almost-were-css/)
+- [A Look Back at the History of CSS](https://css-tricks.com/look-back-history-css/)
+- [Cascading Style Sheets - PhD by Håkon Wium Lie](https://archive.ph/iXqQS)
+
+16. Right click on the new `legacy` folder and create a new file called `index.html` with the following content:
+
+    ```html
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+    <html>
+    <head>
+      <title>TodoMVC</title>
+    </head>
+    <script>
+    function rerender() {
+        frames[1].location.reload();
+    }
+
+    function click(id) {
+        for (var i = 0; i < state.numTodos; i++) {
+            if (state.todos[i].id == id) {
+                state.todos[i].complete = !state.todos[i].complete;
+                rerender();
+                return;
+            }
+        }
+    }
+
+    function addTodo(text) {
+        var nextId = state.nextId;
+        state.nextId++;
+        state.todos[state.numTodos] = makeTodo(nextId, text, false);
+        state.numTodos++;
+        rerender();
+    }
+
+    function clearCompleted() {
+        var newTodos = new Object();
+        var newNum = 0;
+        for (var i = 0; i < state.numTodos; i++) {
+            if (!state.todos[i].complete) {
+                newTodos[newNum] = state.todos[i];
+                newNum++;
+            }
+        }
+        state.todos = newTodos;
+        state.numTodos = newNum;
+        rerender();
+    }
+
+    function filter(newFilter) {
+        state.filter = newFilter;
+        rerender();
+    }
+
+    function makeTodo(id, label, complete) {
+        var todo = new Object();
+        todo.id = id;
+        todo.label = label;
+        todo.complete = complete;
+        return todo;
+    }
+
+    var state = new Object();
+    state.filter = 'all';
+    state.todos = new Object();
+    state.numTodos = 0;
+    state.nextId = 1;
+    </script>
+    <FRAMESET rows="75,*" border="0" frameborder="no" framespacing="0">
+        <FRAME src="header.html" scrolling="no">
+        <FRAME name=content src="todos.html" scrolling="no">
+    </FRAMESET>
+    </html>
+    ```
+
+- [The Internet: Crash Course Computer Science #29](https://www.youtube.com/watch?v=AEaKrq3SpW8)
+- [The World Wide Web: Crash Course Computer Science #30](https://www.youtube.com/watch?v=guvsH5OFizE)
+- [Brief History of the Internet](https://www.internetsociety.org/internet/history-internet/brief-history-internet/)
+- [A Short History of the Internet](https://www.scienceandmediamuseum.org.uk/objects-and-stories/short-history-internet)
+- [See How Fast ARPANET Spread in Just Eight Years](https://web.archive.org/web/20210506160300/https://www.smithsonianmag.com/smart-news/see-how-fast-arpanet-spread-in-just-eight-years-2341268/)
+- [The History of the Internet in a Nutshell](https://www.webfx.com/blog/web-design/the-history-of-the-internet-in-a-nutshell/)
+- [Web Science, Part1: Foundations of the web, Internet vs World Wide Web, Summary of the internet architecture](https://en.wikiversity.org/wiki/Web_Science/Part1:_Foundations_of_the_web/Internet_vs_World_Wide_Web/Summary_of_the_internet_architecture/script)
+- [Basics: The Internet vs The World Wide Web](https://zerotoroot.me/what-the-internet-and-the-world-wide-web-really-are/)
+- [The evolution of the web](https://web.archive.org/web/20210618044853/http://www.evolutionoftheweb.com/)
+- [Evolution of Web](https://dev.to/pragativerma18/evolution-of-web-42eh)
+- [Web Design History Timeline](https://www.webdesignmuseum.org/web-design-history/timeline-1995-1997)
+- [1995 Was The Most Important Year For The Web](https://web.archive.org/web/20230528224556/https://thehistoryoftheweb.com/complete-history/1995-was-the-most-important-year-for-the-web/)
+- [Cool URLs don't change](https://www.w3.org/Provider/Style/URI.html)
+- [First Website Ever (CERN)](http://info.cern.ch/hypertext/WWW/TheProject.html)
+- [Marcin Szczepanski: What's new in Netscape Navigator 2.0 | JSConf EU 2017](https://www.youtube.com/watch?v=Z-nXRZkge2U)
+- [Most Popular Web Browsers 1993 - 2020](https://www.youtube.com/watch?v=W4wWdmfOibY)
+- [Firefox UI UX history](https://archive.ph/jabSV)
+- [The history of the Web](https://www.w3.org/wiki/The_history_of_the_Web)
+
+- [iMacros Chrome Extension](https://chrome.google.com/webstore/detail/imacros-for-chrome/cplklnmnlbnpmjogncfgfijoopmnlemp?hl=en)
+
 - [UI.Vision RPA Browser Extensions](https://ui.vision/)
 - [Wildfire Chrome Extension](https://chrome.google.com/webstore/detail/wildfire/djhgeeodemlfdpmcccdekfalbhllcoim/)
