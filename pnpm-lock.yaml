@@ -273,8 +273,8 @@ packages:
   css-selector-parser@3.0.5:
     resolution: {integrity: sha512-3itoDFbKUNx1eKmVpYMFyqKX04Ww9osZ+dLgrk6GEv6KMVeXUhUnp4I5X+evw+u3ZxVU6RFXSSRxlTeMh8bA+g==}
 
-  dead-or-alive@1.0.2:
-    resolution: {integrity: sha512-AQBp8Yd855uFNQipkn/H/ToX/isidyRSUqaEV0h7jN9f/XUu10Y0rEANZJMano69jh8E7/xV1yE/cA/5He+phw==}
+  dead-or-alive@1.0.3:
+    resolution: {integrity: sha512-LJ2tGXmux1dx6FcuhwKcbHJPiR2OKiPWBY/6Yj6EfFdObK3nue69DlGFr1cUeRmtalqRhWXMztXMcEXJP59XKw==}
 
   debug@4.3.7:
     resolution: {integrity: sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==}
@@ -354,8 +354,8 @@ packages:
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
 
-  fast-content-type-parse@1.1.0:
-    resolution: {integrity: sha512-fBHHqSTFLVnR61C+gltJuE5GkVQMV0S2nqUO8TJ+5Z3qAKG8vAx4FKai1s5jq/inV1+sREynIWSuQ6HgoSXpDQ==}
+  fast-content-type-parse@2.0.0:
+    resolution: {integrity: sha512-fCqg/6Sps8tqk8p+kqyKqYfOF0VjPNYrqpLiqNl0RBKmD80B080AJWVV6EkSkscjToNExcXg1+Mfzftrx6+iSA==}
 
   fill-range@7.1.1:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
@@ -1329,10 +1329,10 @@ snapshots:
 
   css-selector-parser@3.0.5: {}
 
-  dead-or-alive@1.0.2:
+  dead-or-alive@1.0.3:
     dependencies:
       '@types/hast': 3.0.4
-      fast-content-type-parse: 1.1.0
+      fast-content-type-parse: 2.0.0
       hast-util-from-html-isomorphic: 2.0.0
       hast-util-is-element: 3.0.0
       hast-util-select: 6.0.2
@@ -1401,7 +1401,7 @@ snapshots:
 
   extend@3.0.2: {}
 
-  fast-content-type-parse@1.1.0: {}
+  fast-content-type-parse@2.0.0: {}
 
   fill-range@7.1.1:
     dependencies:
@@ -2093,7 +2093,7 @@ snapshots:
   remark-lint-no-dead-urls@2.0.0:
     dependencies:
       '@types/mdast': 4.0.4
-      dead-or-alive: 1.0.2
+      dead-or-alive: 1.0.3
       devlop: 1.1.0
       is-online: 11.0.0
       unified-lint-rule: 3.0.0
