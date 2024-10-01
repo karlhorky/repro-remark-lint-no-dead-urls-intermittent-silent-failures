@@ -2,6 +2,7 @@
 const config = {
   plugins: [
     'remark-mdx',
+    'remark-lint',
     'remark-lint-no-dead-urls',
   ],
 };
