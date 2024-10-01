@@ -7,7 +7,7 @@
   "author": "Karl Horky",
   "main": "index.js",
   "scripts": {
-    "check-failing-intermittent": "remark ./src/pages/ --ext mdx --frail --rc-path remark-lint-no-dead-urls.mjs"
+    "check-failing-intermittent": "remark y.mdx --ext mdx --frail --no-stdout --rc-path remark-lint-no-dead-urls.mjs"
   },
   "dependencies": {
     "remark-cli": "^12.0.1",
