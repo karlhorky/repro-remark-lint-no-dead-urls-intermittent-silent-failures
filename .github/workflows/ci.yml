@@ -19,3 +19,5 @@ jobs:
       - run: pnpm run check-failing-intermittent || echo "Failed"
       - run: pnpm run check-failing-intermittent || echo "Failed"
       - run: pnpm run check-failing-intermittent || echo "Failed"
+      - run: pnpm run check-failing-intermittent || echo "Failed"
+      - run: pnpm run check-failing-intermittent || echo "Failed"
