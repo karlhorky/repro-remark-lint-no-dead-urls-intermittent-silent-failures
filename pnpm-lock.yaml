@@ -15,8 +15,8 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0
       remark-lint-no-dead-urls:
-        specifier: ^2.0.0
-        version: 2.0.0
+        specifier: ^2.0.1
+        version: 2.0.1
       remark-mdx:
         specifier: ^3.0.1
         version: 3.0.1
@@ -746,6 +746,10 @@ packages:
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
+  p-all@5.0.0:
+    resolution: {integrity: sha512-pofqu/1FhCVa+78xNAptCGc9V45exFz2pvBRyIvgXkNM0Rh18Py7j8pQuSjA+zpabI46v9hRjNWmL9EAFcEbpw==}
+    engines: {node: '>=16'}
+
   p-any@4.0.0:
     resolution: {integrity: sha512-S/B50s+pAVe0wmEZHmBs/9yJXeZ5KhHzOsgKzt0hRdgkoR3DxW9ts46fcsWi/r3VnzsnkKS7q4uimze+zjdryw==}
     engines: {node: '>=12.20'}
@@ -753,6 +757,14 @@ packages:
   p-cancelable@3.0.0:
     resolution: {integrity: sha512-mlVgR3PGuzlo0MmTdk4cXqXWlwQDLnONTAg6sm62XkMJEiRxN3GL3SffkYvqwonbkJBcrI7Uvv5Zh9yjvn2iUw==}
     engines: {node: '>=12.20'}
+
+  p-limit@6.1.0:
+    resolution: {integrity: sha512-H0jc0q1vOzlEk0TqAKXKZxdl7kX3OFUzCnNVUnq5Pc3DGo0kpeaMuPqxQn235HibwBEb0/pm9dgKTjXy66fBkg==}
+    engines: {node: '>=18'}
+
+  p-map@6.0.0:
+    resolution: {integrity: sha512-T8BatKGY+k5rU+Q/GTYgrEf2r4xRMevAN5mtXc2aPc4rS1j3s+vWTaO2Wag94neXuCAUAs8cxBL9EeB5EA6diw==}
+    engines: {node: '>=16'}
 
   p-some@6.0.0:
     resolution: {integrity: sha512-CJbQCKdfSX3fIh8/QKgS+9rjm7OBNUTmwWswAFQAhc8j1NR1dsEDETUEuVUtQHZpV+J03LqWBEwvu0g1Yn+TYg==}
@@ -833,8 +845,8 @@ packages:
     resolution: {integrity: sha512-2NAEOACoTgo+e+YAaCTODqbrWyhMVmlUyjxNCkTrDRHHQvH6+NbrnqVvQaLH/Q8Ket3v90A43dgAJmXv8y5Tkw==}
     hasBin: true
 
-  remark-lint-no-dead-urls@2.0.0:
-    resolution: {integrity: sha512-7kJ5rZ6fuuLt6iG2XS/uShVik0LYzshspZ/hNm/oPybXnJrehsYT31Y5AjeX57Mm7DAc7Q8EMSgeDiK/8SYYhQ==}
+  remark-lint-no-dead-urls@2.0.1:
+    resolution: {integrity: sha512-8+uY2GWENktvnTnmDHsAW/DxuPiAmZiKoW5HGuCrGmlqEVh4jPZJ2IGbQgfpyrMKIwp32NYo7Jt+aKb52QJ6sQ==}
 
   remark-lint@10.0.0:
     resolution: {integrity: sha512-E8yHHDOJ8b+qI0G49BRu24pe8t0fNNBWv8ENQJpCGNrVeTeyBIGEbaUe1yuF7OG8faA6PVpcN/pqWjzW9fcBWQ==}
@@ -1058,6 +1070,10 @@ packages:
     resolution: {integrity: sha512-bLQOjaX/ADgQ20isPJRvF0iRUHIxVhYvr53Of7wGcWlO2jvtUlH5m87DsmulFVxRpNLOnI4tB6p/oh8D7kpn9Q==}
     engines: {node: '>= 14'}
     hasBin: true
+
+  yocto-queue@1.1.1:
+    resolution: {integrity: sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==}
+    engines: {node: '>=12.20'}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -1996,12 +2012,22 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
+  p-all@5.0.0:
+    dependencies:
+      p-map: 6.0.0
+
   p-any@4.0.0:
     dependencies:
       p-cancelable: 3.0.0
       p-some: 6.0.0
 
   p-cancelable@3.0.0: {}
+
+  p-limit@6.1.0:
+    dependencies:
+      yocto-queue: 1.1.1
+
+  p-map@6.0.0: {}
 
   p-some@6.0.0:
     dependencies:
@@ -2090,12 +2116,14 @@ snapshots:
       - bluebird
       - supports-color
 
-  remark-lint-no-dead-urls@2.0.0:
+  remark-lint-no-dead-urls@2.0.1:
     dependencies:
       '@types/mdast': 4.0.4
       dead-or-alive: 1.0.3
       devlop: 1.1.0
       is-online: 11.0.0
+      p-all: 5.0.0
+      p-limit: 6.1.0
       unified-lint-rule: 3.0.0
       unist-util-visit: 5.0.0
       vfile: 6.0.3
@@ -2424,5 +2452,7 @@ snapshots:
       strip-ansi: 7.1.0
 
   yaml@2.5.1: {}
+
+  yocto-queue@1.1.1: {}
 
   zwitch@2.0.4: {}
